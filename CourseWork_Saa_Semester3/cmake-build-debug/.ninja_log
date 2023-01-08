@@ -1,0 +1,10 @@
+# ninja log v5
+1	650	6915070487104223	CMakeFiles/CourseWork_Saa_Semester3.dir/DoublyLinkedList.cpp.obj	4df4444e1d2115f4
+1	712	6915067302856350	CMakeFiles/CourseWork_Saa_Semester3.dir/main.cpp.obj	c41740392b3c2818
+687	957	6915070490087982	CourseWork_Saa_Semester3.exe	d3f369e6697d47fa
+4	401	6926418635710737	build.ninja	d255149f1fb5f21f
+7	1073	6907756953199227	CMakeFiles/CourseWork_Saa_Semester3.dir/27_MonotonicallyGrowingTwo-DimensionalArray.cpp.obj	d915cb88eef3b305
+9	901	6926423927463528	CMakeFiles/CourseWork_Saa_Semester3.dir/DoublyLinkedList.cpp.obj	4df4444e1d2115f4
+902	1191	6926423930254143	CourseWork_Saa_Semester3.exe	d3f369e6697d47fa
+7	700	6926424187503512	CMakeFiles/CourseWork_Saa_Semester3.dir/DoublyLinkedList.cpp.obj	4df4444e1d2115f4
+702	989	6926424190324162	CourseWork_Saa_Semester3.exe	d3f369e6697d47fa

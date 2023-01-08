@@ -1,0 +1,12 @@
+# ninja log v5
+7	631	6946700263688913	CMakeFiles/DataStructureGrapg.dir/main.cpp.obj	e7851dede29bbc6f
+633	943	6946700266739809	DataStructureGrapg.exe	2e3cf1455dc6e2a0
+24	782	6946700977899768	CMakeFiles/DataStructureGrapg.dir/Graph.cpp.obj	30058a33ca8ade96
+7	825	6946700978309868	CMakeFiles/DataStructureGrapg.dir/main.cpp.obj	e7851dede29bbc6f
+826	1188	6946700981876155	DataStructureGrapg.exe	167b74c3d2b3f286
+23	674	6946706023307360	CMakeFiles/DataStructureGrapg.dir/Graph.cpp.obj	30058a33ca8ade96
+9	716	6946706023727466	CMakeFiles/DataStructureGrapg.dir/main.cpp.obj	e7851dede29bbc6f
+717	1076	6946706027220334	DataStructureGrapg.exe	167b74c3d2b3f286
+28	670	6946708437278026	CMakeFiles/DataStructureGrapg.dir/Graph.cpp.obj	30058a33ca8ade96
+9	715	6946708437738124	CMakeFiles/DataStructureGrapg.dir/main.cpp.obj	e7851dede29bbc6f
+716	1024	6946708440749105	DataStructureGrapg.exe	167b74c3d2b3f286

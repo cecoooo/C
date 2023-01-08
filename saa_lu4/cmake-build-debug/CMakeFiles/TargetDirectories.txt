@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/PushToGithub/c-c++/saa_lu4/cmake-build-debug/CMakeFiles/saa_lu4.dir
+C:/Users/User/Desktop/PushToGithub/c-c++/saa_lu4/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/PushToGithub/c-c++/saa_lu4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
