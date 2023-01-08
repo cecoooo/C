@@ -31,14 +31,23 @@ void print_arr(int *arr){
 
 void selection_sort(int *arr);
 void selection_sort_stable(int *arr);
+void bubble_sort(int *arr);
 
 int main() {
     int *arr = input_arr();
     print_arr(arr);
-    selection_sort(arr);
+
+//    // Selection Sort
+//    selection_sort(arr);
+//    print_arr(arr);
+//    selection_sort_stable(arr);
+//    print_arr(arr);
+
+    // Bubble Sort
+    bubble_sort(arr);
     print_arr(arr);
-    selection_sort_stable(arr);
-    print_arr(arr);
+
+
     free(arr);
 }
 
@@ -56,7 +65,10 @@ int main() {
  * Complexity analysis of Selection Sort:
  *
  * Time complexity: O(N^2), because there are two nested loops (each of them with complexity O(N))
- * Auxiliary Space: O(1), because there is just one (temp) extra variable to swap the elements
+ * Auxiliary Space: O(1), because there is just one (temp) extra-variable to swap the elements
+ *
+ * Does sorting happen in place in Selection Sort? - Yes  // https://www.geeksforgeeks.org/in-place-algorithm/
+ * Is Selection Sort Algorithm stable? - No               // https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/
  * */
 void selection_sort(int *arr){
     int length = len(arr);
@@ -73,6 +85,7 @@ void selection_sort(int *arr){
     }
 }
 
+// stable version of Selection Sort
 void selection_sort_stable(int *arr){
     int length = len(arr);
     for (int i = 0; i < length-1; ++i) {
@@ -88,5 +101,45 @@ void selection_sort_stable(int *arr){
             min_index--;
         }
         arr[i] = min;
+    }
+}
+
+
+/*
+ * Major idea of Bubble Sort:
+ * To place the largest element in its position and keep doing it for every other element
+ *
+ * Steps for Bubble sort:
+ *
+ * you need nested for loop(with counters i & j), 0 <= i < length, 0 <= j < length-i-1
+ * 1. catch the elements two by two
+ * 2. compare them
+ * 3. swap them if needed
+ * 4. repeat it till the array is sorted, use a boolean variable to reduce time complexity if possible
+ *
+ *
+ * Complexity analysis of Bubble Sort:
+ *
+ * Time complexity: O(N^2) - in worst and average case
+ *                  O(N) - in best case (if a boolean variable is used)
+ * Auxiliary space: O(1) - used only for 'temp' value, while swapping (just one extra-variable)
+ *
+ * Does sorting happen in place in Bubble Sort? - Yes  // https://www.geeksforgeeks.org/in-place-algorithm/
+ * Is Bubble sort Algorithm stable? - Yes              // https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/
+ */
+void bubble_sort(int *arr){
+    int length = len(arr);
+    for (int i = 0; i < length; ++i) {
+        // adding a boolean variable to lower algorithm's complexity
+        bool isSorted = true;
+        for (int j = 0; j < length-i-1; ++j) {
+            if(arr[j] > arr[j+1]){
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                isSorted = false;
+            }
+        }
+        if(isSorted) break;
     }
 }

@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Sorting_algorithms.exe"
+			"path" : "======Sorting_algorithms.exe"
 		},
 		{
-			"path" : "Sorting_algorithms.pdb"
+			"path" : "======Sorting_algorithms.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -80,7 +80,7 @@
 		"language" : "CXX"
 	},
 	"name" : "Sorting_algorithms",
-	"nameOnDisk" : "Sorting_algorithms.exe",
+	"nameOnDisk" : "======Sorting_algorithms.exe",
 	"paths" : 
 	{
 		"build" : ".",
