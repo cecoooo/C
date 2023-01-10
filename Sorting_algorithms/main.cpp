@@ -32,6 +32,7 @@ void print_arr(int *arr){
 void selection_sort(int *arr);
 void selection_sort_stable(int *arr);
 void bubble_sort(int *arr);
+void insertion_sort(int *arr);
 
 int main() {
     int *arr = input_arr();
@@ -42,9 +43,12 @@ int main() {
 //    print_arr(arr);
 //    selection_sort_stable(arr);
 //    print_arr(arr);
-
-    // Bubble Sort
-    bubble_sort(arr);
+//
+//    // Bubble Sort
+//    bubble_sort(arr);
+//    print_arr(arr);
+    // Insertion Sort
+    insertion_sort(arr);
     print_arr(arr);
 
 
@@ -109,7 +113,7 @@ void selection_sort_stable(int *arr){
  * Major idea of Bubble Sort:
  * To place the largest element in its position and keep doing it for every other element
  *
- * Steps for Bubble sort:
+ * Steps for Bubble Sort:
  *
  * you need nested for loop(with counters i & j), 0 <= i < length, 0 <= j < length-i-1
  * 1. catch the elements two by two
@@ -125,7 +129,7 @@ void selection_sort_stable(int *arr){
  * Auxiliary space: O(1) - used only for 'temp' value, while swapping (just one extra-variable)
  *
  * Does sorting happen in place in Bubble Sort? - Yes  // https://www.geeksforgeeks.org/in-place-algorithm/
- * Is Bubble sort Algorithm stable? - Yes              // https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/
+ * Is Bubble Sort Algorithm stable? - Yes              // https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/
  */
 void bubble_sort(int *arr){
     int length = len(arr);
@@ -141,5 +145,49 @@ void bubble_sort(int *arr){
             }
         }
         if(isSorted) break;
+    }
+}
+
+
+/*
+ * About Insertion Sort:
+ *
+ * The algorithm looks like Selection Sort, but it's a bit different.
+ * It divides the array int two parts - sorted and unsorted.
+ * Insertion Sort puts elements in the unsorted subarray in the sorted one on their correct position.
+ * The algorithm is useful for small data values and almost sorted collections
+ *
+ * Steps for Insertion Sort:
+ *
+ * you need a for loop and a nested while loop
+ * 1. iterate through the array
+ * 2. compare the current element with its previous one (for(i) starts int this way i = 1)
+ * 3. if the current element is higher the next one, then swap both and go on till you reach arr[i] >= arr[i-1].
+ * in this way you paste another element in the sorted subarray
+ *
+ *
+ * Complexity analysis of Insertion Sort:
+ *
+ * Complexity time
+ * Worst and average case: O(N^2) or near, there are two nested loops
+ * Best case: O(N)
+ *
+ * Auxiliary space: O(1) = only one extra-variable for swapping elements
+ *
+ *
+ * Does sorting happen in place in Insertion Sort? - Yes  // https://www.geeksforgeeks.org/in-place-algorithm/
+ * Is Insertion Sort algorithm stable? - Yes  // https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/
+ * */
+void insertion_sort(int *arr){
+    int length = len(arr);
+    for (int i = 1; i < length; ++i) {
+        int j = i;
+        while(arr[j] < arr[j-1]){
+            int temp = arr[j];
+            arr[j] = arr[j-1];
+            arr[j-1] = temp;
+            j-=1;
+            if(j == 0) break;
+        }
     }
 }
