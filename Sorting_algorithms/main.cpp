@@ -18,7 +18,7 @@ int len(int *arr){
     int i = 0;
     while (arr[i] > -10000 && arr[i] < 10000)
         i++;
-    return i;
+    return i-1;
 }
 
 void print_arr(int *arr){
