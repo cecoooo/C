@@ -33,6 +33,8 @@ void selection_sort(int *arr);
 void selection_sort_stable(int *arr);
 void bubble_sort(int *arr);
 void insertion_sort(int *arr);
+void merge_sort(int *arr, int l, int r);
+void merge(int *arr, int l, int m, int r);
 
 int main() {
     int *arr = input_arr();
@@ -47,10 +49,13 @@ int main() {
 //    // Bubble Sort
 //    bubble_sort(arr);
 //    print_arr(arr);
-    // Insertion Sort
-    insertion_sort(arr);
-    print_arr(arr);
+//    // Insertion Sort
+//    insertion_sort(arr);
+//    print_arr(arr);
 
+    // Merge Sort
+    merge_sort(arr, 0, len(arr)-1);
+    print_arr(arr);
 
     free(arr);
 }
@@ -189,5 +194,67 @@ void insertion_sort(int *arr){
             j-=1;
             if(j == 0) break;
         }
+    }
+}
+
+/*
+ * Merge Sort:
+ * - The algorithm divides the array by smaller subarrays, sorting each of the and merge them back together.
+ * - Useful for large amount of data, because its low time complexity.
+ * - it's a mainly recursive algorithm which makes some difficulties for newbies to understand its logic.
+ *
+ * Steps for Merge Sort:
+ *
+ * you need two functions (merge_sort() & merge()) which will be invoked recursively
+ * 1. Find the middle point of the array by its most left and most right index (firstly they are going to be 0 & arr.len - 1)
+ * 2. Call merge_sort function for first half
+ * 2. Call merge_sort function for second half
+ * */
+
+void merge_sort(int *arr, int l, int r){
+    if(l < r){
+        int m = l + (r-l)/2;
+        merge_sort(arr, l, m);
+        merge_sort(arr, m+1, r);
+        merge(arr, l, m ,r);
+    }
+}
+
+void merge(int *arr, int l, int m, int r){
+    int i, j, k;
+    int n1 = m-l+1;
+    int n2 = r-m;
+    int L[n1], R[n2];
+
+    for (i = 0; i < n1; ++i)
+        L[i] = arr[l+i];
+    for (j = 0; j < n2; ++j)
+        R[j] = arr[m+1+j];
+
+    i = 0;
+    j = 0;
+    k = l;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            arr[k] = L[i];
+            i++;
+        }
+        else {
+            arr[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    while (i < n1) {
+        arr[k] = L[i];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        arr[k] = R[j];
+        j++;
+        k++;
     }
 }
