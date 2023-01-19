@@ -1,3 +1,14 @@
+/*
+ * The code works correctly.
+ *
+ * However...
+ * By unknown for me reason, it appends '0' at the end of every array, entered by the console.
+ * If you find the bug, you are free to fix it, otherwise do not wonder why your array contains one, two or more extra '0' elements.
+ * The reason may be somewhere between functions' communication, the compiler, or it's just "The Magic" of c/c++.
+ * ;)
+ * */
+
+
 #include <iostream>
 using namespace std;
 
@@ -35,6 +46,8 @@ void bubble_sort(int *arr);
 void insertion_sort(int *arr);
 void merge_sort(int *arr, int l, int r);
 void merge(int *arr, int l, int m, int r);
+void quick_sort(int arr[], int start, int end);
+int partition(int arr[], int start, int end);
 
 int main() {
     int *arr = input_arr();
@@ -53,8 +66,12 @@ int main() {
 //    insertion_sort(arr);
 //    print_arr(arr);
 
-    // Merge Sort
-    merge_sort(arr, 0, len(arr)-1);
+//    // Merge Sort
+//    merge_sort(arr, 0, len(arr)-1);
+//    print_arr(arr);
+
+    // Quick Sort
+    quick_sort(arr, 0, len(arr)-1);
     print_arr(arr);
 
     free(arr);
@@ -257,4 +274,29 @@ void merge(int *arr, int l, int m, int r){
         j++;
         k++;
     }
+}
+
+void quick_sort(int arr[], int start, int end){
+    if(start < end){
+        int pivot_index = partition(arr, start, end);
+        quick_sort(arr, start, pivot_index-1);
+        quick_sort(arr, pivot_index+1, end);
+    }
+}
+
+int partition(int arr[], int start, int end){
+    int pivot = arr[end];
+    int pivot_index = start;
+    for (int i = start; i < end; ++i) {
+        if(arr[i] < pivot) {
+            int temp = arr[i];
+            arr[i] = arr[pivot_index];
+            arr[pivot_index] = temp;
+            pivot_index++;
+        }
+    }
+    int temp = arr[end];
+    arr[end] = arr[pivot_index];
+    arr[pivot_index] = temp;
+    return pivot_index;
 }
