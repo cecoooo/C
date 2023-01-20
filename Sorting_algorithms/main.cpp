@@ -220,12 +220,23 @@ void insertion_sort(int *arr){
  * - Useful for large amount of data, because its low time complexity.
  * - it's a mainly recursive algorithm which makes some difficulties for newbies to understand its logic.
  *
+ *
  * Steps for Merge Sort:
  *
  * you need two functions (merge_sort() & merge()) which will be invoked recursively
  * 1. Find the middle point of the array by its most left and most right index (firstly they are going to be 0 & arr.len - 1)
  * 2. Call merge_sort function for first half
- * 2. Call merge_sort function for second half
+ * 3. Call merge_sort function for second half
+ * 4. After that, call merge function to unite array's parts alternately
+ *
+ *
+ * Complexity analysis of Merge Sort
+ *
+ * Time complexity: O(N*log(N))
+ * Auxiliary space: O(N)
+ *
+ * Does sorting happen in place in Merge Sort? - No  // https://www.geeksforgeeks.org/in-place-algorithm/
+ * Is Merge Sort algorithm stable? - Yes  // https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/
  * */
 
 void merge_sort(int *arr, int l, int r){
@@ -275,6 +286,10 @@ void merge(int *arr, int l, int m, int r){
         k++;
     }
 }
+
+/*
+ *
+ * */
 
 void quick_sort(int arr[], int start, int end){
     if(start < end){
