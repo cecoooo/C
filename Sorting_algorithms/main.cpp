@@ -289,6 +289,34 @@ void merge(int *arr, int l, int m, int r){
 
 /*
  *
+ * Quick Sort:
+ * - It picks an element as a pivot and partitions all other elements around the pivot element.
+ * - Useful for large amount of data structures.
+ * - Like Merge Sort, Quick Sort uses 'divide and conquer' technic via recurse
+ *
+ *
+ * Steps for Quick Sort:
+ *
+ * you need two functions (quick_sort() and partition())
+ * 1. quick_sort() function is invoked recursively, it needs as arguments an array, its start and end index
+ * 2. key function is partition(). It unites the elements around the pivot and take responsibility for start & end indexes
+ * How to choose the pivot? - You move here. In most cases, pivot is the last element in the current subarray.
+ * 3. continue while (start < end)
+ *
+ *
+ * Complexity analysis of Quick Sort:
+ *
+ * Time complexity
+ * Worst case: O(N*N)
+ * Average case: O(N*log(N)), most common
+ * Best case: O(N)
+ * Best case: O(N);
+ *
+ * Auxiliary space: O(1), constant complexity here, only temp variables for swapping
+ *
+ *
+ * Does sorting happen in place in Quick Sort? - Yes  // https://www.geeksforgeeks.org/in-place-algorithm/
+ * Is Quick Sort algorithm stable? - No  // https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/
  * */
 
 void quick_sort(int arr[], int start, int end){
