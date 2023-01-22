@@ -48,6 +48,8 @@ void merge_sort(int *arr, int l, int r);
 void merge(int *arr, int l, int m, int r);
 void quick_sort(int arr[], int start, int end);
 int partition(int arr[], int start, int end);
+void heap_sort(int arr[], int N);
+void heapify(int arr[], int N, int i);
 
 int main() {
     int *arr = input_arr();
@@ -57,23 +59,23 @@ int main() {
 //    selection_sort(arr);
 //    print_arr(arr);
 //    selection_sort_stable(arr);
-//    print_arr(arr);
-//
+
 //    // Bubble Sort
 //    bubble_sort(arr);
-//    print_arr(arr);
+
 //    // Insertion Sort
 //    insertion_sort(arr);
-//    print_arr(arr);
 
 //    // Merge Sort
 //    merge_sort(arr, 0, len(arr)-1);
-//    print_arr(arr);
 
-    // Quick Sort
-    quick_sort(arr, 0, len(arr)-1);
+//    // Quick Sort
+//    quick_sort(arr, 0, len(arr)-1);
+
+    // Heap sort
+    heap_sort(arr, len(arr));
+
     print_arr(arr);
-
     free(arr);
 }
 
@@ -342,4 +344,43 @@ int partition(int arr[], int start, int end){
     arr[end] = arr[pivot_index];
     arr[pivot_index] = temp;
     return pivot_index;
+}
+
+
+void heap_sort(int arr[], int N){
+    for (int i = N/2-1; i >= 0; i--)
+        heapify(arr, N, i);
+
+
+    for (int i = N-1; i > 0; i--) {
+
+        // swap elements
+        int temp = arr[i];
+        arr[i] = arr[0];
+        arr[0] = temp;
+
+        heapify(arr, i, 0);
+    }
+}
+
+void heapify(int arr[], int N, int i){
+    int largest = i;
+
+    int left = i*2+1;
+    int right = i*2+2;
+
+    if(left < N && arr[left] > arr[largest])
+        largest = left;
+    if(right < N && arr[right] > arr[largest])
+        largest = right;
+
+    if(largest != i){
+
+        // swap elements
+        int temp = arr[largest];
+        arr[largest] = arr[i];
+        arr[i] = temp;
+
+        heapify(arr, N, largest);
+    }
 }
