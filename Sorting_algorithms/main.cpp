@@ -290,7 +290,6 @@ void merge(int *arr, int l, int m, int r){
 }
 
 /*
- *
  * Quick Sort:
  * - It picks an element as a pivot and partitions all other elements around the pivot element.
  * - Useful for large amount of data structures.
@@ -346,6 +345,37 @@ int partition(int arr[], int start, int end){
     return pivot_index;
 }
 
+/*
+ * Heap Sort
+ * - Based on Binary Heap data structure
+ * - Nevertheless algorithm is using recursion, it's not strongly recursive
+ * - Heap Sort is easier to implement than other equally efficient sorting algorithms
+ * - It's not very useful for complex data
+ * - 2 to 3 times slower than Merge Sort, not an example of 'Divide & Conquer' algorithm
+ * To understand this algorithm, you must be aware of Binary Heap  // https://www.geeksforgeeks.org/binary-heap/
+ *
+ *
+ * Steps for Heap Sort:
+ *
+ * you need two functions - heap_sort() & heapify()
+ * 1. First step is to form a Max Binary Heap from the given array
+ * You have to do that with heapify() function, invoking it n/2-1 times in heap_sort() function, use for loop.
+ * 2. When you heapify you array get the root and put it in the end of the array
+ * 3. Heapify again, but this time heapify elements till the previous index
+ * After every heapify operation, one element is sorted in the end of the array.
+ * That's the reason we heapify with one element less than the previous operation.
+ * 4. Repeat this process until the size of heap is greater than 1.
+ *
+ *
+ * Complexity analysis of Heap Sort:
+ *
+ * Time complexity: O(N*log(N))
+ * Auxiliary space: O(1), nothing more than 'temp' variable for swapping
+ *
+ *
+ * Does sorting happen in place in Heap Sort? - Yes  // https://www.geeksforgeeks.org/in-place-algorithm/
+ * Is Heap Sort algorithm stable? - No  // https://www.geeksforgeeks.org/stable-and-unstable-sorting-algorithms/
+ * */
 
 void heap_sort(int arr[], int N){
     for (int i = N/2-1; i >= 0; i--)
