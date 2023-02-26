@@ -1,0 +1,15 @@
+# ninja log v5
+1	643	6991473684076213	CMakeFiles/coordinates.dir/main.cpp.obj	687accdaaff0e4f0
+648	886	6991473686428303	coordinates.exe	ec257820eb8b11e0
+7	752	6991488733224264	CMakeFiles/coordinates.dir/main.cpp.obj	687accdaaff0e4f0
+754	1077	6991488736225221	coordinates.exe	ec257820eb8b11e0
+11	721	6991489149438872	CMakeFiles/coordinates.dir/main.cpp.obj	687accdaaff0e4f0
+723	958	6991489151717365	coordinates.exe	ec257820eb8b11e0
+8	717	6991490434887825	CMakeFiles/coordinates.dir/main.cpp.obj	687accdaaff0e4f0
+718	1013	6991490437867351	coordinates.exe	ec257820eb8b11e0
+7	712	6991491959659404	CMakeFiles/coordinates.dir/main.cpp.obj	687accdaaff0e4f0
+740	940	6991491961854742	coordinates.exe	ec257820eb8b11e0
+8	680	6991493206745093	CMakeFiles/coordinates.dir/main.cpp.obj	687accdaaff0e4f0
+681	957	6991493209409446	coordinates.exe	ec257820eb8b11e0
+7	756	6991493680461269	CMakeFiles/coordinates.dir/main.cpp.obj	687accdaaff0e4f0
+757	983	6991493682500749	coordinates.exe	ec257820eb8b11e0
