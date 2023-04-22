@@ -29,7 +29,6 @@ int main() {
     point2.x = x;
     point2.y = y;
     cout << "distance: " << distance(point1, point2);
-
     return 0;
 }
 
