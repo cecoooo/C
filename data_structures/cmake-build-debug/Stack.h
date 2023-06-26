@@ -1,32 +1,32 @@
 //
-// Created by User on 25/06/2023.
+// Created by User on 26/06/2023.
 //
+
+#ifndef DATA_STRUCTURES_STACK_H
+#define DATA_STRUCTURES_STACK_H
 
 #include <cstdlib>
 
 template <typename T>
 
-#ifndef DATA_STRUCTURES_QUEUE_H
-#define DATA_STRUCTURES_QUEUE_H
 
-
-class Queue {
+class Stack {
 private:
     T* data;
-    int count;
     T head;
+    int count;
 public:
-    Queue(){
+    Stack(){
         this->count = 0;
         this->data = new T[1];
     }
     void push(T element){
         this->data[this->count] = element;
+        this->head = element;
         this->count++;
-        this->data = (T*) realloc(this->data, sizeof(T)*(count+1));
+        this->data = (T*)realloc(this->data, sizeof(T)*this->count);
     }
     T peek(){
-        this->head = this->count ? this->data[0]: NULL;
         return this->head;
     }
     void pop(){
@@ -34,9 +34,10 @@ public:
         this->head = this->data[this->count-1];
         this->data = (T*)realloc(this->data, sizeof(T)*this->count);
     }
-    int size() {
+    int size(){
         return this->count;
     }
 };
 
-#endif //DATA_STRUCTURES_QUEUE_H
+
+#endif //DATA_STRUCTURES_STACK_H

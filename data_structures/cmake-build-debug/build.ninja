@@ -61,6 +61,12 @@ build CMakeFiles/data_structures.dir/Queue.cpp.obj: CXX_COMPILER__data_structure
   OBJECT_DIR = CMakeFiles\data_structures.dir
   OBJECT_FILE_DIR = CMakeFiles\data_structures.dir
 
+build CMakeFiles/data_structures.dir/Stack.cpp.obj: CXX_COMPILER__data_structures_Debug C$:/Users/User/Desktop/PushToGithub/c-c++/data_structures/cmake-build-debug/Stack.cpp || cmake_object_order_depends_target_data_structures
+  DEP_FILE = CMakeFiles\data_structures.dir\Stack.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\data_structures.dir
+  OBJECT_FILE_DIR = CMakeFiles\data_structures.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target data_structures
@@ -69,7 +75,7 @@ build CMakeFiles/data_structures.dir/Queue.cpp.obj: CXX_COMPILER__data_structure
 #############################################
 # Link the executable data_structures.exe
 
-build data_structures.exe: CXX_EXECUTABLE_LINKER__data_structures_Debug CMakeFiles/data_structures.dir/main.cpp.obj CMakeFiles/data_structures.dir/Queue.cpp.obj
+build data_structures.exe: CXX_EXECUTABLE_LINKER__data_structures_Debug CMakeFiles/data_structures.dir/main.cpp.obj CMakeFiles/data_structures.dir/Queue.cpp.obj CMakeFiles/data_structures.dir/Stack.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\data_structures.dir
