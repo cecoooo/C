@@ -10,6 +10,8 @@ int main() {
     queue->push(3);
     queue->push(4);
     cout << queue->peek();
+    cout << queue->poll();
+    cout << queue->peek();
 
 //    int* arr;
 //    free(arr);
