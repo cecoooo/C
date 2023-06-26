@@ -1,0 +1,25 @@
+# ninja log v5
+9	711	7094120930816333	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+711	963	7094120933168427	data_structures.exe	85c26868acf26510
+21	203	7094120925635690	CMakeFiles/data_structures.dir/Queue.cpp.obj	f018df1eeea34f83
+22	209	7094122908881553	CMakeFiles/data_structures.dir/Queue.cpp.obj	f018df1eeea34f83
+7	700	7094122913854232	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+701	1027	7094122916895544	data_structures.exe	85c26868acf26510
+8	739	7094124377845596	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+740	951	7094124379884019	data_structures.exe	85c26868acf26510
+7	640	7094124875937969	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+642	924	7094124878285257	data_structures.exe	85c26868acf26510
+8	775	7094125093972956	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+777	999	7094125096012361	data_structures.exe	85c26868acf26510
+7	721	7094127273411859	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+723	1048	7094127276553346	data_structures.exe	85c26868acf26510
+8	663	7094129769267955	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+664	871	7094129771307354	data_structures.exe	85c26868acf26510
+9	794	7094130254582142	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+795	1108	7094130257563834	data_structures.exe	85c26868acf26510
+24	244	7094130787039055	CMakeFiles/data_structures.dir/Queue.cpp.obj	f018df1eeea34f83
+23	219	7094131129324480	CMakeFiles/data_structures.dir/Queue.cpp.obj	f018df1eeea34f83
+7	789	7094131134955230	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+790	1051	7094131137467824	data_structures.exe	85c26868acf26510
+6	518	7094132075668933	CMakeFiles/data_structures.dir/main.cpp.obj	effddf9192cb421
+519	742	7094132077868597	data_structures.exe	85c26868acf26510
