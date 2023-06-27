@@ -24,7 +24,7 @@ public:
         this->data[this->count] = element;
         this->head = element;
         this->count++;
-        this->data = (T*)realloc(this->data, sizeof(T)*this->count);
+        this->data = (T*)realloc(this->data, sizeof(T)*(this->count+1));
     }
     T peek(){
         return this->head;
