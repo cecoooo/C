@@ -46,6 +46,7 @@ int main() {
         cout << ll->get_at(3) << "\n";
         cout << ll->get_at(2) << "\n";
         ll->remove_at(3);
+        ll->reverse();
         ll->clear();
         free(ll);
     }catch (const invalid_argument e){

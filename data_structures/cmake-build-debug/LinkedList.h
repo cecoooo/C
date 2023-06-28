@@ -35,6 +35,15 @@ private:
         free(node);
         clear(new_node);
     }
+    void reverse(Node* node, Node* node_next){
+        if(node_next == NULL) {
+            this->first = node;
+            return;
+        }
+        Node * next_to_next = node_next->get_next();
+        node_next->set_next(node);
+        reverse(node_next, next_to_next);
+    }
 public:
     LinkedList(){
         this->count = 0;
@@ -145,7 +154,10 @@ public:
         this->last = NULL;
     }
     void reverse(){
-
+        if(this->count == 0 || this->count == 1) return;
+        this->last = this->first;
+        reverse(this->first, this->first->get_next());
+        this->last->set_next(NULL);
     }
     int size(){
         return this->count;
