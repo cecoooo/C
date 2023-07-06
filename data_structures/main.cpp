@@ -32,26 +32,28 @@ int main() {
 //    cout << stack->peek() << "\n" << stack->size();
 //    free(stack);
 
-    LinkedList<int> *ll = new LinkedList<int>();
-    try {
-        ll->add(1);
-        ll->add(2);
-        ll->add(3);
-        ll->add(4);
-        ll->insert(2, 5);
-        ll->insert(0, 6);
-        ll->insert(5, 7);
-        cout << ll->get_first() << "\n";
-        cout << ll->get_last() << "\n";
-        cout << ll->get_at(3) << "\n";
-        cout << ll->get_at(2) << "\n";
-        ll->remove_at(3);
-        ll->reverse();
-        ll->clear();
-        free(ll);
-    }catch (const invalid_argument e){
-        free(ll);
-        cout << e.what();
-        exit(3);
-    }
+//    LinkedList<int> *ll = new LinkedList<int>();
+//    try {
+//        ll->add(1);
+//        ll->add(2);
+//        ll->add(3);
+//        ll->add(4);
+//        ll->insert(2, 5);
+//        ll->insert(0, 6);
+//        ll->insert(5, 7);
+//        cout << ll->get_first() << "\n";
+//        cout << ll->get_last() << "\n";
+//        cout << ll->get_at(3) << "\n";
+//        cout << ll->get_at(2) << "\n";
+//        ll->remove_at(3);
+//        ll->reverse();
+//        ll->clear();
+//        free(ll);
+//    }catch (const invalid_argument e){
+//        free(ll);
+//        cout << e.what();
+//        exit(3);
+//    }
+
+
 }
