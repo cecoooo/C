@@ -5,6 +5,12 @@
 
 using namespace std;
 
+void func(int M, int N){
+    for(unsigned i = 5; i >= 0; i--){
+        cout<<i;
+    }
+}
+
 int main() {
 //    Queue<int> *queue = new Queue<int>();
 //    queue->push(1);
@@ -55,5 +61,6 @@ int main() {
 //        exit(3);
 //    }
 
+    func(5, 6);
 
 }

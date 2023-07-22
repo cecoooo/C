@@ -1,0 +1,3 @@
+C:/Users/User/Desktop/PushToGithub/c-c++/ex20/cmake-build-debug/CMakeFiles/ex20.dir
+C:/Users/User/Desktop/PushToGithub/c-c++/ex20/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/User/Desktop/PushToGithub/c-c++/ex20/cmake-build-debug/CMakeFiles/rebuild_cache.dir
