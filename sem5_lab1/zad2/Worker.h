@@ -14,7 +14,6 @@ private:
 	string position;
 	double* salaries;
 	int salary_arr_len;
-	int salary_count; 
 public:
 	Worker() {
 		this->social_number = 0;
@@ -62,32 +61,59 @@ public:
 	void set_position(string pos) {
 		this->position = pos;
 	}
-	int number_of_salaries() {
-		return this->salary_count;
-	}
+	static int salary_count;
 	void add_salary(double salary) {
-		if (this->salary_arr_len == this->salary_count) {
-			double* time_arr = (double*)realloc(this->salaries, sizeof(double) * this->salary_arr_len*2);
-			this->salaries = (double*)realloc(time_arr, sizeof(double) * this->salary_arr_len * 2);
-			this->salary_arr_len *= 2;
-		}
-		this->salaries[this->salary_count] = salary;
-		this->salary_count++;
-	}
-	double average_salary() {
-		double sum = 0;
-		for (int i = 0; i < this->salary_count; i++) {
-			sum += this->salaries[i];
-		}
-		return sum / this->salary_count;
-	}
-	double min_salary() {
-		double min = DBL_MAX;
-		for (int i = 0; i < this->salary_count; i++) {
-			if (this->salaries[i] < min) {
-				min = this->salaries[i];
+			if (this->salary_arr_len == this->salary_count) {
+				double* time_arr = (double*)realloc(this->salaries, sizeof(double) * this->salary_arr_len * 2);
+				this->salaries = (double*)realloc(time_arr, sizeof(double) * this->salary_arr_len * 2);
+				this->salary_arr_len *= 2;
 			}
+			this->salaries[this->salary_count] = salary;
+			this->salary_count++;
 		}
-		return min;
-	}
+	double average_salary() {
+			double sum = 0;
+			for (int i = 0; i < this->salary_count; i++) {
+				sum += this->salaries[i];
+			}
+			return sum / this->salary_count;
+		}
+	double min_salary() {
+			double min = DBL_MAX;
+			for (int i = 0; i < this->salary_count; i++) {
+				if (this->salaries[i] < min) {
+					min = this->salaries[i];
+				}
+			}
+			return min;
+		}
 };
+
+
+//void Worker::add_salary(double salary) {
+//	if (this->salary_arr_len == this->salary_count) {
+//		double* time_arr = (double*)realloc(this->salaries, sizeof(double) * this->salary_arr_len * 2);
+//		this->salaries = (double*)realloc(time_arr, sizeof(double) * this->salary_arr_len * 2);
+//		this->salary_arr_len *= 2;
+//	}
+//	this->salaries[this->salary_count] = salary;
+//	this->salary_count++;
+//}
+//
+//double Worker::average_salary() {
+//	double sum = 0;
+//	for (int i = 0; i < this->salary_count; i++) {
+//		sum += this->salaries[i];
+//	}
+//	return sum / this->salary_count;
+//}
+//
+//double Worker::min_salary() {
+//	double min = DBL_MAX;
+//	for (int i = 0; i < this->salary_count; i++) {
+//		if (this->salaries[i] < min) {
+//			min = this->salaries[i];
+//		}
+//	}
+//	return min;
+//}

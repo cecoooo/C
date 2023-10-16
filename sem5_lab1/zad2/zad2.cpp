@@ -7,7 +7,7 @@ using namespace std;
 
 int main()
 {
-    Worker worker("durvar");
+    /*Worker worker("durvar");
     worker.set_name("Ivan");
     worker.set_social_number(123);
     worker.set_work_experience(13);
@@ -42,5 +42,7 @@ int main()
     }
     cout << '\n' << worker.average_salary() << '\n';
     cout << worker.min_salary() << '\n';
-    cout << '\n' << worker.number_of_salaries() << '\n';
+    cout << '\n' << worker.number_of_salaries() << '\n';*/
+
+    Worker::salary_count;
 }
