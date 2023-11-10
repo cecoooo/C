@@ -1,5 +1,6 @@
 #include <iostream>
 #include <memory>
+#include <vector>
 using namespace std;
 
 void print(void * data, char type) 
@@ -32,6 +33,51 @@ public:
 		cout << "Obj destructed" << endl;
 	}
 };
+
+bool compareAcs(int a, int b) 
+{
+	return a > b;
+}
+
+bool compareDesc(int a, int b) 
+{
+	return a < b;
+}
+
+void swap(int* a, int* b) 
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void OrderCollection(vector<int>* collection, bool(*sortingFunc)(int, int))
+{
+	for (size_t i = 0; i < collection->size(); i++)
+	{
+		bool isAlredySorted = true;
+		for (size_t j = 0; j < collection->size()-i-1; j++)
+		{
+			if (sortingFunc(collection->at(j), collection->at(j+1)))
+			{
+				swap(&collection->at(j), &collection->at(j + 1));
+				isAlredySorted = false;
+			}
+		}
+		if (isAlredySorted)
+			break;
+	}
+}
+
+void printVector(vector<int> collection) 
+{
+	for (size_t i = 0; i < collection.size(); i++)
+	{
+		cout << collection[i] << " ";
+	}
+}
+
+
 
 int main()
 {
@@ -100,4 +146,11 @@ int main()
 	MyClass myClass;
 	weak_ptr<MyClass> wPtr = make_shared<MyClass>(myClass);
 	cout << *sPtr << endl;*/
+
+	vector<int> arr = { 6,3,7,5,1,9,0,6,-1,3,-8 };
+	bool(*sortFunc)(int, int) = compareAcs;
+	OrderCollection(&arr, sortFunc);
+	printVector(arr);
+
+
 }
